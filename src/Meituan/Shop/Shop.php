@@ -43,7 +43,7 @@ class Shop extends Client
      */
     public function open($params)
     {
-        return $this->post('poi/open', $params);
+        return $this->json('poi/open', $params);
     }
 
     /**
@@ -53,7 +53,7 @@ class Shop extends Client
      */
     public function close($params)
     {
-        return $this->post('poi/close', $params);
+        return $this->json('poi/close', $params);
     }
 
     /**
@@ -63,7 +63,7 @@ class Shop extends Client
      */
     public function offline($params)
     {
-        return $this->post('poi/offline', $params);
+        return $this->json('poi/offline', $params);
     }
 
     /**
@@ -73,7 +73,7 @@ class Shop extends Client
      */
     public function online($params)
     {
-        return $this->post('poi/online', $params);
+        return $this->json('poi/online', $params);
     }
 
     /**
@@ -83,7 +83,7 @@ class Shop extends Client
      */
     public function updatepromoteinfo($params)
     {
-        return $this->post('poi/updatepromoteinfo', $params);
+        return $this->json('poi/updatepromoteinfo', $params);
     }
 
     /**
@@ -93,7 +93,7 @@ class Shop extends Client
      */
     public function tags($params)
     {
-        return $this->post('poiTag/list', $params);
+        return $this->json('poiTag/list', $params);
     }
 
     /**
@@ -103,7 +103,7 @@ class Shop extends Client
      */
     public function updateTime($params)
     {
-        return $this->post('shippingtime/update', $params);
+        return $this->json('shippingtime/update', $params);
     }
 
     /**
@@ -113,7 +113,7 @@ class Shop extends Client
      */
     public function isDelayPush($params)
     {
-        return $this->post('poi/logistics/isDelayPush', $params);
+        return $this->json('poi/logistics/isDelayPush', $params);
     }
 
     /**
@@ -123,7 +123,7 @@ class Shop extends Client
      */
     public function setDelayPush($params)
     {
-        return $this->post('poi/logistics/setDelayPush', $params);
+        return $this->json('poi/logistics/setDelayPush', $params);
     }
 
     /**
@@ -133,7 +133,7 @@ class Shop extends Client
      */
     public function saveRange($params)
     {
-        return $this->post('shipping/save', $params);
+        return $this->json('shipping/save', $params);
     }
 
     /**
@@ -153,7 +153,7 @@ class Shop extends Client
      */
     public function batchsave($params)
     {
-        return $this->post('shipping/batchsave', $params);
+        return $this->json('shipping/batchsave', $params);
     }
 
     /**
@@ -173,7 +173,7 @@ class Shop extends Client
      */
     public function delete($params)
     {
-        return $this->post('shipping/delete', $params);
+        return $this->json('shipping/delete', $params);
     }
 
     /**
@@ -183,6 +183,6 @@ class Shop extends Client
      */
     public function spec($params)
     {
-        return $this->post('shipping/spec/save', $params);
+        return $this->json('shipping/spec/save', $params);
     }
 }
