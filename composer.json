@@ -1,0 +1,21 @@
+{
+    "name": "buoly\/waimai",
+    "description": "A waimai SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "buoly",
+            "email": "buoly@sina.com"
+        }
+    ],
+    "require": {
+        "pimple/pimple": "^3.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "monolog/monolog": "^1.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "Waimai\\": "src"
+        }
+    }
+}
