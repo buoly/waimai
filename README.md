@@ -19,24 +19,30 @@ require __DIR__ .'/vendor/autoload.php';
 use Waimai\Waimai;
 
 $config = [
+
     'meituan' => [
         'app_id' => '****',
         'secret' => '********************************',
     ],
+    
     'jd' => [
         'app_id' => '****',
         'secret' => '********************************',
     ],
+    
     'debug' => true,
+    
     'log' => [
         'name' => 'waimai',
         'file' => __DIR__.'/logs/waimai.log',
         'level' => 'debug',
         'permission' => 0777,
     ],
+    
 ];
 
 $jd = Waimai::JD($config);
+
 $mt = Waimai::Meituan($config);
 ```
 
@@ -50,10 +56,12 @@ $params = array(
 );
 
 $shop_jd = $jd->shop;
+
 $shop_mt = $mt->shop;
 
 
 $result1 = $shop_jd->save($params);
+
 $result2 = $shop_mt->save($params);
 
 ```
