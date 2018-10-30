@@ -1,27 +1,63 @@
-<h1 align="center"> waimai </h1>
+<h1 align="center"> Waimai </h1>
 
-<p align="center"> A waimai SDK.</p>
+<p align="center"> 多个外卖平台（饿了么、美团外卖、百度外卖、京东到家）的SDK.</p>
 
 
-## Installing
+## 安装
 
 ```shell
 $ composer require buoly/waimai -vvv
 ```
 
-## Usage
+## 配置
+使用本扩展，需要去 外卖平台（饿了么、美团外卖、百度外卖、京东到家）的密钥。
+## 使用
 
-TODO
+```php
+require __DIR__ .'/vendor/autoload.php';
 
-## Contributing
+use Waimai\Waimai;
 
-You can contribute in one of three ways:
+$params = array(
+// 参数
+);
+$config = [
+    'meituan' => [
+        'app_id' => '****',
+        'secret' => '********************************',
+    ],
+    'jd' => [
+        'app_id' => '****',
+        'secret' => '********************************',
+    ],
+    'debug' => true,
+    'log' => [
+        'name' => 'waimai',
+        'file' => __DIR__.'/logs/waimai.log',
+        'level' => 'debug',
+        'permission' => 0777,
+    ],
+];
 
-1. File bug reports using the [issue tracker](https://github.com/buoly/waimai/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/buoly/waimai/issues).
-3. Contribute new features or update the wiki.
+$jd = Waimai::JD($config);
+$mt = Waimai::Meituan($config);
+```
 
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
+## 修改门店信息
+
+```
+$shop_jd = $jd->shop;
+$shop_mt = $mt->shop;
+
+
+$result1 = $shop_jd->save($params);
+$result2 = $shop_mt->save($params);
+
+```
+
+## 参数说明
+
+参考外卖平台接口
 
 ## License
 
