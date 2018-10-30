@@ -18,9 +18,6 @@ require __DIR__ .'/vendor/autoload.php';
 
 use Waimai\Waimai;
 
-$params = array(
-// 参数
-);
 $config = [
     'meituan' => [
         'app_id' => '****',
@@ -46,6 +43,12 @@ $mt = Waimai::Meituan($config);
 ## 修改门店信息
 
 ```
+
+
+$params = array(
+// 参数
+);
+
 $shop_jd = $jd->shop;
 $shop_mt = $mt->shop;
 
