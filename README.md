@@ -35,8 +35,6 @@ $config = [
     'log' => [
         'name' => 'waimai',
         'file' => __DIR__.'/logs/waimai.log',
-        'level' => 'debug',
-        'permission' => 0777,
     ],
     
 ];

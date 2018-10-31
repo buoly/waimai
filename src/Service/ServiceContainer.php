@@ -26,9 +26,6 @@ class ServiceContainer extends Container
     }
 
     /**
-     * 初始化日志
-     * User: zhangzhen
-     * Date: 2018/8/28 16:55
      * @throws \Exception
      */
     private function initializeLogger()
